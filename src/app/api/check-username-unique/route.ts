@@ -10,6 +10,7 @@ const UsernameQuerySchema = z.object({
 
 
 export async function GET(request: Request){
+
    await dbConnect()
    try {
        const {searchParams} = new URL(request.url)
@@ -42,7 +43,7 @@ export async function GET(request: Request){
     return Response.json({
         success: true,
         message:  'Username is unique ',
-    }, {status:400}) 
+    }, {status:200}) 
 
 } catch (error) {
     console.error("Error cheking username", error)

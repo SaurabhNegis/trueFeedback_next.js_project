@@ -34,6 +34,8 @@ export interface User extends Document {
     
  // Define the User schema
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
 const UserSchema: Schema<User> = new Schema({
     username: { type: String, required:[true, "username is required!"] },
    

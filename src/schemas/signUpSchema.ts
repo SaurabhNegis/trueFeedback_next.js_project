@@ -8,7 +8,7 @@ const usernameRegex = /^[a-zA-Z0-9_-]{3,16}$/;
 export const usernameValidation = z
 .string()
 .min(2,"username must be atleast 2 characters")
-.max(20, "username must be more than  20 charachters")
+.max(20, "username must not be more than  20 charachters")
 .regex(usernameRegex, "Username must be 3-16 characters long and can only contain letters, numbers, underscores, or hyphens.")
 
 export const signUpSchema = z.object({
